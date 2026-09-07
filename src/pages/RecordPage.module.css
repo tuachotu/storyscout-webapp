@@ -1,0 +1,43 @@
+.page h1 {
+  margin: 8px 0 12px;
+  font-size: clamp(2rem, 8vw, 3rem);
+  line-height: 1.05;
+}
+.step {
+  color: #686868;
+  font-size: 0.85rem;
+}
+.timer {
+  margin: 48px 0 24px;
+  font-size: 4rem;
+  font-variant-numeric: tabular-nums;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+.secondary {
+  color: #111;
+  background: #eee;
+}
+.preview {
+  display: grid;
+  gap: 16px;
+  margin-top: 32px;
+}
+.preview audio {
+  width: 100%;
+}
+.error {
+  color: #a31919;
+  margin-top: 20px;
+}
+@media (max-width: 420px) {
+  .actions {
+    flex-direction: column-reverse;
+  }
+  .actions button {
+    width: 100%;
+  }
+}

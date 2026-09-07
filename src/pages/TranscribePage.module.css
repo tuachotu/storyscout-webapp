@@ -1,0 +1,166 @@
+.page {
+  display: grid;
+  gap: 2rem;
+}
+.intro {
+  max-width: 48rem;
+}
+.intro h1 {
+  font-size: clamp(2.7rem, 7vw, 5.6rem);
+  letter-spacing: -0.055em;
+  line-height: 0.94;
+  margin: 0.35rem 0 1rem;
+}
+.intro > p:last-child {
+  color: var(--ink-muted);
+  font-size: 1.08rem;
+  max-width: 39rem;
+}
+.panel {
+  display: grid;
+  gap: 1.3rem;
+  max-width: 46rem;
+}
+.tabs {
+  background: var(--paper-dark);
+  border-radius: 999px;
+  display: flex;
+  padding: 0.25rem;
+  width: fit-content;
+}
+.tabs button {
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  color: var(--ink-muted);
+  cursor: pointer;
+  font: 700 0.82rem var(--sans);
+  padding: 0.65rem 1rem;
+}
+.tabs .activeTab {
+  background: white;
+  box-shadow: 0 2px 8px rgb(55 45 34 / 8%);
+  color: var(--ink);
+}
+.field {
+  display: grid;
+  gap: 0.5rem;
+}
+.field span {
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+.field input {
+  background: rgb(255 255 255 / 60%);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink);
+  font: 1rem var(--sans);
+  padding: 0.9rem 1rem;
+}
+.job,
+.transcript {
+  display: grid;
+  gap: 1.1rem;
+}
+.jobHeader,
+.transcript header {
+  align-items: start;
+  display: flex;
+  justify-content: space-between;
+}
+.jobHeader h2,
+.transcript h2 {
+  margin: 0;
+  text-transform: capitalize;
+}
+.state {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.5rem 0.75rem;
+  text-transform: uppercase;
+}
+.state[data-state='completed'] {
+  background: #e3efe7;
+  border-color: #b6d1bf;
+  color: #315a41;
+}
+.state[data-state='failed'] {
+  background: #f6e5e1;
+  border-color: #e1b9b1;
+  color: #843f37;
+}
+.meta {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+}
+.meta div {
+  background: var(--paper-dark);
+  padding: 0.8rem;
+}
+.meta dt {
+  color: var(--ink-muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.meta dd {
+  margin: 0.3rem 0 0;
+  overflow-wrap: anywhere;
+}
+.progress {
+  background: var(--paper-dark);
+  border-radius: 999px;
+  height: 0.4rem;
+  overflow: hidden;
+}
+.progress span {
+  animation: progress 1.4s ease-in-out infinite;
+  background: var(--terracotta);
+  display: block;
+  height: 100%;
+  width: 35%;
+}
+.failure {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.transcript header p {
+  color: var(--ink-muted);
+  margin: 0.3rem 0 0;
+}
+.transcript pre {
+  background: var(--paper-dark);
+  border-radius: 14px;
+  font: 1rem/1.75 var(--serif);
+  margin: 0;
+  max-height: 34rem;
+  overflow: auto;
+  padding: 1.25rem;
+  white-space: pre-wrap;
+}
+@keyframes progress {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(300%);
+  }
+}
+@media (max-width: 640px) {
+  .meta {
+    grid-template-columns: 1fr;
+  }
+  .failure,
+  .transcript header {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,27 @@
+.status {
+  align-items: center;
+  color: var(--ink-muted);
+  display: flex;
+  font-size: 0.82rem;
+  font-weight: 700;
+  gap: 0.45rem;
+  text-transform: capitalize;
+}
+
+.dot {
+  background: #b58b42;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgb(181 139 66 / 14%);
+  height: 0.55rem;
+  width: 0.55rem;
+}
+
+.status[data-status='online'] .dot {
+  background: #4b765c;
+  box-shadow: 0 0 0 4px rgb(75 118 92 / 14%);
+}
+
+.status[data-status='offline'] .dot {
+  background: #a14f45;
+  box-shadow: 0 0 0 4px rgb(161 79 69 / 14%);
+}

@@ -1,0 +1,45 @@
+.app {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.shell {
+  width: min(100%, 480px);
+}
+.brand {
+  margin: 0 0 64px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.access h1 {
+  margin: 8px 0 32px;
+  font-size: clamp(2rem, 8vw, 3rem);
+  line-height: 1.05;
+}
+.step {
+  color: #686868;
+  font-size: 0.85rem;
+}
+.access form {
+  display: grid;
+  gap: 12px;
+}
+.access label {
+  font-weight: 600;
+}
+.access input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #b7b7b7;
+  border-radius: 8px;
+  font: inherit;
+}
+.error {
+  color: #a31919;
+}
+@media (max-width: 520px) {
+  .brand {
+    margin-bottom: 48px;
+  }
+}
