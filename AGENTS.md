@@ -26,3 +26,11 @@
   step.
 - On resumption, read the approved plan, progress log, and `STATUS.md`; inspect
   the actual files and rerun the last relevant validation before continuing.
+
+## Approved book reader amendment — 2026-10-06
+
+The user approved public book landing and reading pages using the documented API,
+prepared summaries, original-language/English text, optional images, and original
+audio playback through API-issued S3 URLs. This overrides conflicting historical
+feature restrictions above for this scope only. Live local reader testing approved.
+See ../planning/2026-10-06/book-reader/plan.md. No deployment or infrastructure changes.

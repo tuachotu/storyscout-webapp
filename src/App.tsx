@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react';
 
+import { BookReader } from './books/BookReader';
 import { api } from './api/client';
 import type { AccessSession } from './api/types';
 import { RecordPage } from './pages/RecordPage';
@@ -7,6 +8,14 @@ import { errorMessage } from './utils';
 import styles from './App.module.css';
 
 export function App() {
+  return window.location.pathname.startsWith('/books/') ? (
+    <BookReader />
+  ) : (
+    <RecordingApp />
+  );
+}
+
+function RecordingApp() {
   const [session, setSession] = useState<AccessSession | null>(null);
   const [guid, setGuid] = useState('');
   const [busy, setBusy] = useState(false);

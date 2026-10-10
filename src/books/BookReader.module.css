@@ -1,0 +1,297 @@
+.reader {
+  min-height: 100vh;
+  background: #f8f5ef;
+  color: #292e28;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+.reader a {
+  color: #315643;
+  text-underline-offset: 5px;
+}
+.reader a:focus-visible {
+  outline: 3px solid #8a6b3f;
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+.topbar {
+  min-height: 78px;
+  padding: 24px 6%;
+  border-bottom: 1px solid #dedbd2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.wordmark {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  font-weight: 750;
+}
+.topLabel {
+  font:
+    italic 16px Georgia,
+    serif;
+  color: #65685d;
+}
+.book {
+  max-width: 900px;
+  padding: 0 40px;
+  margin: auto;
+}
+.intro {
+  padding: 78px 0 48px;
+}
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  font-weight: 650;
+  color: #65705e;
+}
+.intro h1 {
+  font:
+    400 clamp(42px, 6vw, 68px)/1.15 Georgia,
+    'Times New Roman',
+    serif;
+  margin: 22px 0;
+  letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
+}
+.subtitle {
+  color: #686b63;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.rule {
+  height: 3px;
+  width: 44px;
+  background: #8e7952;
+  margin-top: 32px;
+}
+.contents {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #c8c9be;
+  padding-bottom: 15px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #68705f;
+}
+.contents span:last-child {
+  letter-spacing: 0;
+  font:
+    italic 15px Georgia,
+    serif;
+}
+.chapter {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 18px;
+  padding: 34px 0 38px;
+  border-bottom: 1px solid #dedbd2;
+  scroll-margin-top: 25px;
+}
+.chapterNumber {
+  font:
+    24px Georgia,
+    serif;
+  color: #8f947f;
+  padding-top: 5px;
+}
+.chapter h2 {
+  font:
+    400 28px Georgia,
+    serif;
+  margin: 0 0 15px;
+}
+.summary {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #5a6056;
+  white-space: pre-line;
+  margin: 0 0 18px;
+}
+.audioBlock {
+  margin: 12px 0 18px;
+}
+.listen {
+  background: #e9eee5;
+  color: #315643;
+  border: 1px solid #d4dece;
+  border-radius: 5px;
+  min-height: 43px;
+  padding: 9px 15px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+}
+.listen span {
+  font-size: 12px;
+  margin-right: 8px;
+}
+.audioBlock audio {
+  width: min(100%, 430px);
+  display: block;
+}
+.audioBlock audio[hidden] {
+  display: none;
+}
+.audioError {
+  color: #9a3427;
+  font-size: 14px;
+}
+.readLinks {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.readLinks a {
+  text-decoration-thickness: 1px;
+}
+.readLinks a span {
+  color: #697364;
+}
+.footer {
+  padding: 45px 0 60px;
+  text-align: center;
+  font:
+    italic 17px Georgia,
+    serif;
+  color: #757967;
+}
+.reading {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 40px 80px;
+}
+.back {
+  display: inline-block;
+  margin-bottom: 38px;
+  font-size: 14px;
+}
+.reading h1 {
+  font:
+    400 48px Georgia,
+    serif;
+  margin: 18px 0 28px;
+}
+.languageSwitch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 1px solid #d1d5c9;
+  padding: 0 0 25px;
+  margin-bottom: 35px;
+  font-size: 14px;
+}
+.languageSwitch a {
+  padding: 10px 12px;
+  border-radius: 4px;
+}
+.languageSwitch a[aria-current='page'] {
+  color: #fff;
+  background: #315643;
+  text-decoration: none;
+}
+.prose {
+  font-family: Georgia, 'Noto Serif Devanagari', 'Kohinoor Devanagari', serif;
+  font-size: 20px;
+  line-height: 1.95;
+  overflow-wrap: anywhere;
+}
+.prose p {
+  margin: 0 0 1.4em;
+  white-space: pre-line;
+}
+.reading figure {
+  margin: 25px 0;
+}
+.reading img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.reading figcaption {
+  color: #697364;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.message {
+  max-width: 800px;
+  margin: auto;
+  padding: 65px 30px;
+}
+.message h1 {
+  font:
+    36px Georgia,
+    serif;
+}
+@media (max-width: 600px) {
+  .topbar {
+    min-height: 64px;
+    padding: 20px 24px;
+  }
+  .topLabel {
+    display: none;
+  }
+  .book,
+  .reading {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .intro {
+    padding-top: 48px;
+    padding-bottom: 35px;
+  }
+  .chapter {
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 12px;
+  }
+  .chapterNumber {
+    font-size: 18px;
+    padding-top: 7px;
+  }
+  .chapter h2 {
+    font-size: 26px;
+  }
+  .summary {
+    font-size: 15px;
+  }
+  .readLinks {
+    gap: 8px;
+    font-size: 13px;
+  }
+  .reading h1 {
+    font-size: 39px;
+  }
+  .prose {
+    font-size: 19px;
+  }
+}
+
+.summaryDetails {
+  margin: 12px 0;
+  border-bottom: 1px solid #dedbd2;
+}
+.summaryDetails summary {
+  cursor: pointer;
+  padding: 10px 0;
+  color: #315643;
+  font-size: 14px;
+  font-weight: 600;
+}
+.summaryDetails summary:focus-visible {
+  outline: 3px solid #8a6b3f;
+  outline-offset: 3px;
+}
+.summaryDetails .summary {
+  margin-top: 12px;
+}
+.unavailable {
+  color: #777;
+  cursor: not-allowed;
+  font-size: 14px;
+  line-height: 1.7;
+}
